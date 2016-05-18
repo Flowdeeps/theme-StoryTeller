@@ -52,7 +52,7 @@
 
   {{ if $gimme->current_list->at_end }}
       </li>
-      <li><!-- {{'comments'|translate}} --></li>
+      <li><!-- {{ #comments# }} --></li>
     </ul>
   </nav>
   {{ /if }}

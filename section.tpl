@@ -32,7 +32,7 @@
                   <h1>{{$gimme->article->name}}</h1>
 
 
-                  <a href="{{url options="article"}}" class="startButton" >{{'open'|translate}}</a>
+                  <a href="{{url options="article"}}" class="startButton" >{{ #open# }}</a>
 
               </div>
           </div>
