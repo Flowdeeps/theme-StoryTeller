@@ -43,11 +43,18 @@
     <link rel="shortcut icon" href="{{uri static_file="assets/img/favicon.ico"}}">
     <link rel="apple-touch-icon" href="{{uri static_file="assets/img/touch-icon.png" }}">
 
-
+    <!-- this is specifically for the colour of the mute and menu sticks -->
+    {{ if $gimme->article->furniture_colour }}
+    <style>
+      .mute, .stick {
+        background: #{{ $gimme->article->furniture_colour }}!important;
+      }
+    </style>
+    {{ /if }}
 
     <!-- grunt boilerplate -->
       <!-- assets versioning -->
-      {{ assign var="VER_ENV" value="1463669791870" scope="global" }}
+      {{ assign var="VER_ENV" value="1463670775276" scope="global" }}
 
       <link href="{{ url static_file="assets/css/style.css?v=$VER_ENV" }}" rel="stylesheet">
 
