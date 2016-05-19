@@ -239,8 +239,9 @@
     right: 54px;
     top: 13px;
     z-index: 100;
-    background: url('@{img}/icon-unmuted.svg') center center no-repeat transparent;
-    background-size: cover;
+    background-color: #868585;
+    mask: url('@{img}/icon-unmuted.svg') center center no-repeat;
+    mask-size: cover;
     display: inline-block;
     text-indent: -1000px;
     overflow: hidden;
@@ -253,7 +254,7 @@
   }
 
   .mute.muted {
-    background-image: url('@{img}/icon-muted.svg');
+    mask-image: url('@{img}/icon-muted.svg');
     background-size: cover;
   }
 
