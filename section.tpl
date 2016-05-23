@@ -5,7 +5,7 @@
 <body class="longform"{{ if $gimme->browser->ua_type == "mobile" }} mobile{{ /if }}>
 <article>
 
-{{ list_articles  constraints="type is storyteller type is super_story"}}
+{{ list_articles constraints="type is storyteller type is super_story" }}
   <div class="landingpage" >
 
       <div class="bg-image"

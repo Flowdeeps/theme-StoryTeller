@@ -3,7 +3,7 @@
 
 <div class="container">
 
-{{ list_articles  constraints="type is storyteller"}}
+{{ list_articles  constraints="type is storyteller type is super_story"}}
 {{if $gimme->current_list->index%2==1}}
   <div class="row">
 {{/if}}
@@ -30,4 +30,3 @@
 
 </body>
 </html>
-
