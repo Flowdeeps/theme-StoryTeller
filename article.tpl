@@ -29,7 +29,7 @@
   <!-- main audio -->
   <audio id="master-audio" preload="none" autoplay="autoplay" loop="loop"></audio>
   {{ if $gimme->browser->ua_type != "mobile" }}
-  <a href="#" class="mute">Mute</a>
+  <a href="#" class="mute{{ if $gimme->$article->persistent_nav }} persistent{{ /if }}">Mute</a>
   {{ /if }}
 
   <!-- navigation -->
