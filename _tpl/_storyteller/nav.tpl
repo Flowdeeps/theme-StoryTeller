@@ -1,6 +1,6 @@
 {{ if $gimme->article->nav }}
 
-<div class="menu_open">
+<div class="menu_open{{ if $article->persistent_nav }} persistent{{ /if }}">
   <div class="sticks_wrapper">
     <div class="stick -first" id="stick1"></div>
     <div class="stick -second" id="stick2"></div>
@@ -8,7 +8,7 @@
   </div>
 </div>
 
-<div class="nav">
+<div class="nav{{ if $article->persistent_nav }} persistent{{ /if }}">
   <nav>
   <ul>
   {{ $cover = 0 }}

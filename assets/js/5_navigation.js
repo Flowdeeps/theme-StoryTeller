@@ -3,14 +3,15 @@ window.nav = {
     init: function() {
 
         $(".menu_open").on("click.nav", function() {
-            $("body").toggleClass("paneOpen");
-            if ($('body').hasClass('mobile')){
-              $(".longform .nav").find('ul.active').each(function(){
-                $(this).removeClass('active');
-              });
+            if ($(".longform .nav").not('.persistent')) {
+              $("body").toggleClass("paneOpen");
+              if ($('body').hasClass('mobile')){
+                $(".longform .nav").find('ul.active').each(function(){
+                  $(this).removeClass('active');
+                });
+              }
             }
         });
-
 
         // mute button
 

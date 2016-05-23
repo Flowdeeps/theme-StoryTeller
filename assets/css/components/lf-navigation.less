@@ -10,6 +10,9 @@
     padding: 0;
     cursor: pointer;
     z-index: 100;
+    &.persistent {
+      display: none;
+    }
     .transitions;
     .sticks_wrapper {
       position: absolute;
@@ -230,7 +233,8 @@
     }
   }
 
-  .paneOpen .nav {
+  .paneOpen .nav,
+  .nav.persistent {
     right: 0;
   }
 
@@ -247,6 +251,9 @@
     overflow: hidden;
     width: 25px;
     height: 25px;
+    &.persistent {
+      right: 15px;
+    }
   }
 
   .no-nav .mute {
