@@ -4,7 +4,33 @@
 
 <body class="longform{{ if !$gimme->article->nav }} no-nav{{/if}}{{ if $gimme->browser->ua_type == "mobile" }} mobile{{ /if }}" name="top">
 
-  <h1>Holy shit this shit is massive</h1>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <div id="loader-wrapper" >
+    {{ image rendition="fullscreen" }}
+    <div id="loader-image" data-src="{{ $image->src }}" ></div>
+    {{ /image }}
+
+    <div class="spinner">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+
+  </div>
+
+  <!-- main audio -->
+  <audio id="master-audio" preload="none" autoplay="autoplay" loop="loop"></audio>
+  {{ if $gimme->browser->ua_type != "mobile" }}
+  <a href="#" class="mute{{ if $gimme->article->persistent_nav }} persistent{{ /if }}">Mute</a>
+  {{ /if }}
 
 {{ /list_articles }}
 
@@ -33,6 +59,12 @@
     </div>
 
   </div>
+
+    {{ list_related_articles }}
+    <section>
+      <h2>{{ $gimme->article->name }}</h2>
+    </section>
+    {{ /list_related_articles }}
 
   <!-- main audio -->
   <audio id="master-audio" preload="none" autoplay="autoplay" loop="loop"></audio>
