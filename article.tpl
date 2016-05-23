@@ -1,5 +1,13 @@
 {{ include file="_tpl/_html-head.tpl" }}
 
+{{ list_articles constraints="type is super_story" length="1" }}
+
+<body class="longform{{ if !$gimme->article->nav }} no-nav{{/if}}{{ if $gimme->browser->ua_type == "mobile" }} mobile{{ /if }}" name="top">
+
+  <h1>Holy shit this shit is massive</h1>
+
+{{ /list_articles }}
+
 {{ list_articles constraints="type is storyteller" length="1" }}
 
 <body class="longform{{ if !$gimme->article->nav }} no-nav{{/if}}{{ if $gimme->browser->ua_type == "mobile" }} mobile{{ /if }}" name="top">
